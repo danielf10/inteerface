@@ -7,7 +7,7 @@
 
 Adminstrador de eventos para la compañia HalaKen
 
-###Versión### 
+###Versión###
 
 0.1
 
