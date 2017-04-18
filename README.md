@@ -1,12 +1,15 @@
 # README #
 
 
-### What is this repository for? ###
 
-* Resúmen
-.. Adminstrador de eventos para la compañia HalaKen
-* Versión
-.. 0.1
+
+###Resúmen###
+
+Adminstrador de eventos para la compañia HalaKen
+
+###Versión### 
+
+0.1
 
 ### Autores ###
 * Arturo Castillo Valles <acv629@gmail.com>
