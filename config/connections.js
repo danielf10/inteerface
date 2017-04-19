@@ -83,6 +83,14 @@ module.exports.connections = {
   // }
 
 
+  postgresServer:{
+    adapter: 'sails-postgresql',
+    host: 'localhost',
+    user: 'postgres',
+    password: '1973284a',
+    database: 'Eventos'
+  }
+
   /***************************************************************************
   *                                                                          *
   * More adapters: https://github.com/balderdashy/sails                      *

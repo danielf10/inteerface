@@ -44,4 +44,9 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
+  'POST /evento': {
+    controller: 'EventoController',
+    action: 'create'
+  }
+
 };
