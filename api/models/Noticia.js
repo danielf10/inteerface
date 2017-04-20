@@ -10,6 +10,11 @@ module.exports = {
   attributes: {
     str:{
       type: 'string'
+    },
+
+    // Hacemos referencia a Evento
+    dueno:{
+      model: 'evento'
     }
   }
 };

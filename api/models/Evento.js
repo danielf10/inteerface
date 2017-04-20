@@ -19,6 +19,13 @@ module.exports = {
     },
     fecha:{
       type: 'date'
+    },
+
+// Añadimos la referencia a las Noticias
+
+    noticias:{
+      collection: 'noticia',
+      via: 'dueno'
     }
   }
 };
