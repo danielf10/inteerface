@@ -5,14 +5,15 @@
 	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!--STYLES-->
 	<!--STYLES END-->
+  <link href="styles/css/eventList.css" rel="stylesheet">
 </head>
-<body>
-  <div class="row">
+<body ng-app="app">
+  <div id="banner" class="row">
     <div class="col s12 m12 l12">
-      <img class="responsive-img" src="">
+      <img src="images/banner.jpg">
     </div>
+    <img id="logo" src="images/logo.jpg">
   </div>
-  <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper">
         <ul class="left">
@@ -27,8 +28,21 @@
         </ul>
       </div>
     </nav>
+  <div class="container" ng-controller="EventListController as events">
+    <event-card-directive ng-repeat="event in events.eventList" type="list"></event-card-directive>
   </div>
+
+
+
+
 <!--SCRIPTS-->
 <!--SCRIPTS END-->
+<script type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript" src="js/app/app.js"></script>
+<script type="text/javascript" src="js/app/services/event.service.js"></script>
+<script type="text/javascript" src="js/app/directives/eventCard.directive.js"></script>
+<script type="text/javascript" src="js/app/controllers/event.controller.js"></script>
+<script type="text/javascript" src="js/app/controllers/eventList.controller.js"></script>
+<script type="text/javascript" src="js/eventList.js"></script>
 </body>
 </html>

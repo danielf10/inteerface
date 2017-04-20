@@ -20,6 +20,9 @@ module.exports = {
     fecha:{
       type: 'date'
     },
+    imagen:{
+      type:'string'
+    },
 
 // Añadimos la referencia a las Noticias
 

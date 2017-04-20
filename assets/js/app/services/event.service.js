@@ -1,39 +1,36 @@
 (function(){
   angular
     .module('app')
-    .service('Event',Event)
+    .service('Event',['$http',Event])
 
-  function Event(){
-    var eventList=getEventList()
+  function Event(http){
     var event={
       getEvent:getEvent,
-      eventList:eventList
+      getEventList:getEventList
     };
     return event
 
-    function getEventList(argument) {
-      var response
-      $http({
+    function getEventList(skip) {
+      return http({
         method:'GET',
-        url:'/eventList',
-      }).then(function(res){response=successEvent(res)},function(res){response=failureEvent(res)})
-      return response
+        url:'/evento/find?limit=10&skip='+skip,
+      }).then(function(res){ return successEvent(res)},function(res){return failureEvent(res)})
     }
 
     function getEvent(eventID){
-      var response
-      $http({
+      return http({
         method:'GET',
-        url:'/event/'+eventID
-      }).then(function(res){response=successEvent(res)},function(res){response=failureEvent(res)})
-      return response
+        url:'/evento/find?where={"id":'+eventID+'}',
+      }).then(function(res){return successEvent(res)},function(res){return failureEvent(res)})
     }
 
-    function successEvent(response) {
-      return JSON.parse(response.data)
+    function successEvent(res) {
+      console.log(res.data)
+      return res.data
     }
 
-    function failureEvent(response) {
+    function failureEvent(res) {
+      console.log(res.statusText)
       return {}
     }
 
