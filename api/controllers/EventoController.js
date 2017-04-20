@@ -12,7 +12,7 @@ module.exports = {
         Evento.create(req.body).exec(function(err,evento){
             if(err) return res.send(501,{msg: 'No se pudo crear el evento.'});
             console.log(evento);
-            return res.send(201,evento);
+            return res.send(201,{msg: 'Se creo el evento.'});
         });
     }
 };
