@@ -1,0 +1,27 @@
+.cabeza{
+	border-radius: 10px;
+	float:left;
+	text-align: center;
+	background: #AA8139;
+	width: 1200px;
+	height: 300px;
+	padding: 0px 0px;
+	margin: 10px;
+
+}
+.detalles{
+	border-radius: 10px;
+	float: right;
+	text-align: left;
+	width: 100%;
+	height: 100%;
+	padding: 0px 0px;
+	margin: 10px;
+}
+.mapa{
+	border-left: 1000px; 
+	float: left;
+	width: 50%;
+	height: 50%;
+	margin: 10px;
+}

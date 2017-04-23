@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--STYLES-->
+	<!--STYLES END-->
+  <link href="styles/css/eventList.css" rel="stylesheet">
+  <link href="styles/css/devent.css" rel="stylesheet">
+  <script type="text/javascript" src="js/dependencies/jquery-3.2.1.js"></script>
+  <script src = "js/dependencies/materialize.js"></script>
+  <script type="text/javascript">
+     $(document).ready(function(){
+      $('.carousel').carousel();
+    });
+  </script>
+</head>
+<body>
+    <div id="banner" class="row">
+      <div class="col s12 m12 l12">
+        <img src="images/banner.jpg">
+      </div>
+      <img id="logo" src="images/logo.jpg">
+    </div>
+      <nav>
+        <div class="nav-wrapper">
+          <ul class="left">
+            <li><a href="">Inicio</a></li>
+            <li><a href="">Nuevos Eventos</a></li>
+            <li><a href="">Noticias</a></li>
+            <li><a href="">Historial de eventos</a></li>
+          </ul>
+          <ul class="right">
+            <li><a href="">Iniciar Sesión</a></li>
+            <li><a href="" class="btn waves-effect waves-light">Registrarse</a></li>
+          </ul>
+        </div>
+      </nav>
+    <div class="container" ng-controller="EventListController as events">
+      <event-card-directive ng-repeat="event in events.eventList" type="list"></event-card-directive>
+    </div>
+  <!--Inicio tarjeta-->
+  <div class = "container">
+    <div class="col s12 m7" style = "background: #AA8139">
+        <h2 class="header">Nombre del evento</h2>
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="images/avatar.png" width="100px" height="100px">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content" style="background: #AA8139; margin-left: 10px">
+              <p>Fecha: </p>
+              <p>Lugar: </p>
+              <p>Descipcion: </p>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <!--fin de tarjeta-->
+  <!--Botones-->
+  <div class = "container">
+    <a class="waves-effect waves-light btn"><i class="material-icons left">shared</i>Compartir</a>
+
+    <a class="waves-effect waves-light btn">Registrarse</a>
+    <br>
+  </div>
+  <!--Fin Botones-->
+  <!--localizacion google-->
+  <div class = "container">
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.932427032934!2d-99.14670518534652!3d19.41532538689414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fed8b4ed6361%3A0x9754ef147b3832ee!2sMuseo+del+Juguete+Antiguo+M%C3%A9xico!5e0!3m2!1ses-419!2smx!4v1492927214796" width="100%" height="150%" frameborder="0" style="border:0" allowfullscreen></iframe>  
+    </div>
+    <!--fin localizacion google-->
+    <!--inicio de carrusel de imagenes-->
+     <div class="carousel">
+      <a class="carousel-item" href="#one!"><img src="https://scontent.fmex5-1.fna.fbcdn.net/v/t1.0-9/18011016_1142170515929317_7656320533876411001_n.jpg?oh=7c3d43666594242c2de4a0ce94fdfd23&oe=59805154"></a>
+      <a class="carousel-item" href="#two!"><img src="https://scontent.fmex5-1.fna.fbcdn.net/v/t1.0-9/18010837_1142170302596005_4388302713072339194_n.jpg?oh=c42b9f915d224c1dfeb6e7f348173024&oe=598002D4"></a>
+      <a class="carousel-item" href="#three!"><img src="https://scontent.fmex5-1.fna.fbcdn.net/v/t1.0-9/15232247_1041980189281684_3218640518545371200_n.jpg?oh=86d556a003b65c12a697f7279ca4ba89&oe=598FB6E3"></a>
+      <a class="carousel-item" href="#four!"><img src="https://scontent.fmex5-1.fna.fbcdn.net/v/t1.0-9/15095001_1008790695933967_157331503329842211_n.jpg?oh=923ff7ec169e88edbd74410637cd944a&oe=597FFC5F"></a>
+    </div>
+  </div>
+
+  <!--Fin carrusel de imagenes-->
+  <!--Inicio notas de noticias-->
+   <div class = "container">
+    <div class="divider"></div>
+    <div class="section">
+      <h5>Actualizacion N</h5>
+      <p>Stuff</p>
+    </div>
+    <div class="divider"></div>
+    <div class="section">
+      <h5>Actualizacion N-1</h5>
+      <p>Stuff</p>
+    </div>
+    <div class="divider"></div>
+    <div class="section">
+      <h5>Actualizacion N-2</h5>
+      <p>Stuff</p>
+    </div>
+  </div>
+  <!--Fin notas de noticias-->
+</body>
+
+
+
+<!--SCRIPTS-->
+<!--SCRIPTS END-->
